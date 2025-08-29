@@ -100,8 +100,37 @@ header {
     height: 532px;
 }
 
+.about .about-button-mobile {
+    display:none;
+}
 
- 
+@media (max-width: 800px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about-right-side {
+        justify-content: center;
+    }
+
+    .about-left-side a {
+        display:none;
+    }
+
+    .about .about-button-mobile {
+        display:flex;
+        justify-content: center;
+    }
+
+    .about-button-mobile a {
+        min-width: 310px;
+        margin: 0px;
+        display:flex;
+        justify-content: center;
+        
+    }
+}
+
 @media (max-width: 600px) {
     
     .header-logo {
@@ -125,5 +154,24 @@ header {
     .header-button span {
         display:none;
     }
+
+    .about-right-side img {
+        width: 344px;
+        height: 344px;
+    }
+
+    .about-left-side {
+    margin-left: 34px;
+    }
+
+    .about-left-side h1 {
+    font-size: 28px;
+    }
+
+    .about-left-side p {
+    font-size: 14px;
+    max-width: 310px;
+    }
+
 
 }
