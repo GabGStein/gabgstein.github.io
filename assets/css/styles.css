@@ -21,9 +21,12 @@ header {
 
 .header-logo {
     margin-left:10px;
+    cursor: pointer;
 }
 
-.header-button a{
+.header-button a,
+.about a{
+    max-width:255px;
     text-decoration: none;
     background-color: #B3F00D;
     color: #092F32;
@@ -35,15 +38,69 @@ header {
     margin-right:10px;
 }
 
-.header-button a:hover {
-    background: linear-gradient(95deg, #B3F00D -0%, #2AC8A3);
+.header-button a:hover,
+.about a:hover {
+    background: linear-gradient(95deg, #B3F00D 0%, #B3F00D 50%, #2AC8A3 100%);
 }
 
-.header-button a img {
+.header-button a img,
+.about a img {
     width: 22px;
     height: 22px;
     margin-right: 10px;
 }
+
+.about {
+    max-width: 1110px;
+    width:100%;
+    margin:auto;
+    display:flex;
+}
+
+.about-left-side,
+.about-right-side {
+    flex:1;
+}
+
+.about-left-side {
+    margin-left: 10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-right-side {
+    margin-right: 10px;
+    display:flex;
+    justify-content: flex-end;
+}
+
+.about-left-side h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #B3F00D;
+    margin-bottom: 10px;
+}
+
+.about-left-side h1 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+.about-left-side p {
+    font-size: 16px;
+    color: #FFF;
+    margin-bottom: 40px;
+}
+
+.about-right-side img {
+    width: 532px;
+    height: 532px;
+}
+
+
  
 @media (max-width: 600px) {
     
