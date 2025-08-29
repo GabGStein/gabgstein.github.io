@@ -19,6 +19,10 @@ header {
     align-items: center;
 }
 
+.header-logo {
+    margin-left:10px;
+}
+
 .header-button a{
     text-decoration: none;
     background-color: #B3F00D;
@@ -28,6 +32,7 @@ header {
     border-radius: 10px;
     display:flex;
     align-items: center;
+    margin-right:10px;
 }
 
 .header-button a:hover {
@@ -38,4 +43,30 @@ header {
     width: 22px;
     height: 22px;
     margin-right: 10px;
+}
+ 
+@media (max-width: 600px) {
+    
+    .header-logo {
+        margin-left:32px;
+    }
+    
+    .header-logo img {
+        width: 146px;
+        height:22px;
+    }
+
+    .header-button a {
+        padding: 14px 15px;
+        margin-right:32px;
+    }
+
+    .header-button a img {
+        margin: 0px;
+    }
+
+    .header-button span {
+        display:none;
+    }
+
 }
