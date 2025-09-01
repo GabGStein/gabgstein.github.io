@@ -249,7 +249,22 @@ header {
     max-width: 540px;;
 }
 
-.info-right-side img:first-child {
+.info-right-side .info-social img {
+    display:block;
+    width: 100%;
+    height: 100%;
+    border-radius:50%
+}
+
+.info-right-side .info-social a {
+    display:inline-block;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 41px;
+    height: 41px;
+}
+
+.info-right-side .info-social a:first-child {
     margin-right: 30px;
 }
 
