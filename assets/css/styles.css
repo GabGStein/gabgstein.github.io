@@ -144,9 +144,18 @@ header {
 .skills-right-side {
     display: flex;
     max-width: 516px;
-    flex-flow: wrap;
+}
+
+.skills-right-side .skills-track {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 50px;
     justify-content: center;
     align-items: center;
+}
+
+.skills-right-side .slide {
+    display:flex;
     gap: 50px;
 }
 
@@ -175,6 +184,26 @@ header {
     font-weight: 100;
 }
 
+.skills-right-side .carousel-dots {
+    display:none;
+    padding-top: 30px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.skills-right-side .dot {
+    width: 19px;
+    height: 19px;
+    background-color: #fff;
+    border-radius: 50%;
+    border:none;
+    cursor: pointer;
+}
+
+.skills-right-side .dot.active {
+    background-color: #B3F00D;
+}
+
 @media (max-width: 800px) {
     .about {
         flex-direction: column;
@@ -197,15 +226,24 @@ header {
         min-width: 310px;
         margin: 0px;
         display:flex;
+        justify-content: center;  
+    }
+    
+    .skills {
+        flex-direction: column;
         justify-content: center;
-        
+        align-items: center;
+    }
+
+    .skills-left-side {
+        margin-bottom: 50px;
     }
 }
 
 @media (max-width: 600px) {
     
     .header-logo {
-        margin-left:32px;
+        margin-left:30px;
     }
     
     .header-logo img {
@@ -215,7 +253,7 @@ header {
 
     .header-button a {
         padding: 14px 15px;
-        margin-right:32px;
+        margin-right:30px;
     }
 
     .header-button a img {
@@ -232,7 +270,7 @@ header {
     }
 
     .about-left-side {
-    margin-left: 34px;
+    margin-left: 30px;
     }
 
     .about-left-side h1 {
@@ -243,4 +281,51 @@ header {
     font-size: 14px;
     max-width: 310px;
     }
+
+    .skills {
+        align-items: flex-start;
+    }
+
+    .skills-left-side {
+        margin-left:30px;
+    }
+
+    .skills-left-side h1 {
+        font-size: 24px;
+    }
+
+    .skills-left-side p {
+        font-size:14px;
+        max-width: 314px;
+    }
+
+    .skills-right-side {
+        width:100%;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .skills-right-side .skills-track {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        transition: transform 0.3s ease;
+        gap:0px;
+    }
+
+    .skills-right-side .slide {
+        flex: 0 0 100%;
+        gap:0px;
+    }
+    
+    .skills-right-side .slide:last-child {
+        justify-content: center;
+    }
+
+    .skills-right-side .skills-track .item {
+        flex: 0 0 50%;
+    }
+
+    .skills-right-side .carousel-dots {
+        display:flex;
+}
 }
